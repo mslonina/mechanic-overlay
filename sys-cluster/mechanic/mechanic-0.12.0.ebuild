@@ -3,47 +3,31 @@
 # $Header: $
 
 EAPI=4
+
 inherit cmake-utils
 
 DESCRIPTION="MPI task management system"
 HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
-SRC_URI="http://github.com/downloads/mslonina/Mechanic/mechanic-0.12.0.tar.gz"
+SRC_URI="http://github.com/downloads/mslonina/Mechanic/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fortran"
 
-RDEPEND="
-  fortran? ( >=sys-devel/gcc-4.6 sci-libs/hdf5[fortran] sys-cluster/openmpi[fortran] )
-  sys-cluster/openmpi
-  dev-libs/libreadconfig[hdf]
-"
+DEPEND="dev-libs/libreadconfig[hdf5]
+	fortran? ( virtual/fortran )
+	virtual/mpi[fortran?]"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
-  export CC=mpicc
-  use fortran && export FC=mpif90
-}
-
-src_prepare() {
-  base_src_prepare
+	export CC=mpicc
+	use fortran && export FC=mpif90
 }
 
 src_configure() {
-  if use fortran; then
-    local mycmakeargs=(
-      -DBUILD_FORTRAN:BOOL=ON
-    )
-  else
-    local mycmakeargs=(
-      -DBUILD_FORTRAN:BOOL=OFF
-    )
-  fi
-  cmake-utils_src_configure
+	local mycmakeargs=(
+		$(cmake-utils_use_build fortran)
+	)
+	cmake-utils_src_configure
 }
-
-src_install() {
-  cmake-utils_src_install
-}
-
-
