@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-  sys-cluster/mechanic[fortran]
+  sci-misc/mechanic[fortran]
 "
 
 pkg_setup() {
@@ -22,16 +22,8 @@ pkg_setup() {
   export FC=mpif90
 }
 
-src_prepare() {
-  base_src_prepare
-}
-
 src_configure() {
   cmake-utils_src_configure
-}
-
-src_install() {
-  cmake-utils_src_install
 }
 
 
