@@ -6,6 +6,6 @@
 		<name>Mariusz Słonina</name>
 	</maintainer>
   <use>
-    <flag name='hdf5'>Enable <pkg>sci-libs/hdf5</pkg> support</flag>
+    <flag name='config'>Use <pkg>dev-libs/libreadconfig</pkg> to parse config files</flag>
   </use>
 </pkgmetadata>

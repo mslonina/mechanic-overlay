@@ -5,7 +5,4 @@
 		<email>mariusz.slonina@gmail.com</email>
 		<name>Mariusz Słonina</name>
 	</maintainer>
-  <use>
-    <flag name='hdf5'>Enable <pkg>sci-libs/hdf5</pkg> support</flag>
-  </use>
 </pkgmetadata>
