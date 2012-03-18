@@ -5,31 +5,35 @@
 EAPI=4
 inherit cmake-utils
 
-DESCRIPTION="Library for reading and writing configuration files with HDF5 support"
-HOMEPAGE="http://git.astri.umk.pl/project/libreadconfig"
-SRC_URI="http://github.com/downloads/mslonina/Mechanic/libreadconfig-0.12.0.tar.gz"
+DESCRIPTION="The Arnoldweb module for Mechanic"
+HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
+SRC_URI="http://github.com/downloads/mslonina/Mechanic/mechanic_module_arnoldweb-0.12.1.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="hdf"
+IUSE="config"
 
 RDEPEND="
-  hdf? ( sci-libs/hdf5 )
+  sys-cluster/mechanic
 "
+
+pkg_setup() {
+  export CC=mpicc
+}
 
 src_prepare() {
   base_src_prepare
 }
 
 src_configure() {
-  if use hdf; then
+  if use config; then
     local mycmakeargs=(
-      -DBUILD_HDF5:BOOL=ON
+      -DLRC:BOOL=ON
     )
-  else 
+  else
     local mycmakeargs=(
-      -DBUILD_HDF5:BOOL=OFF
+      -DLRC:BOOL=OFF
     )
   fi
   cmake-utils_src_configure
