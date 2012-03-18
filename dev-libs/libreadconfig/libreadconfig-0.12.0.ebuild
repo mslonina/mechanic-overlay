@@ -7,7 +7,7 @@ EAPI=4
 inherit cmake-utils
 
 DESCRIPTION="Library for reading and writing configuration files with HDF5 support"
-HOMEPAGE="http://git.astri.umk.pl/project/libreadconfig"
+HOMEPAGE="http://git.astri.umk.pl/projects/libreadconfig"
 SRC_URI="http://github.com/downloads/mslonina/Mechanic/${P}.tar.gz"
 
 LICENSE="BSD"
