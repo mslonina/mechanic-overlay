@@ -17,7 +17,7 @@ USE="fortran hdf5" emerge --autounmask-write mechanic
 USE="fortran hdf5" emerge mechanic
 
 Note: for MAC OS X users:
-USE="-numa static-libs fortran hdf5" emerge mechanic
+USE="-numa -pci static-libs fortran hdf5" emerge mechanic
 
 ## Installing Mechanic modules
 
