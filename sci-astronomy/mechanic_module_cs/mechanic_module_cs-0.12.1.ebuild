@@ -13,17 +13,14 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="
+DEPEND="
   sci-misc/mechanic[fortran]
+  virtual/mpi[fortran]
 "
+RDEPEND=${DEPEND}
 
 pkg_setup() {
   export CC=mpicc
   export FC=mpif90
 }
-
-src_configure() {
-  cmake-utils_src_configure
-}
-
 
