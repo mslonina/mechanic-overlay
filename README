@@ -13,11 +13,11 @@ PORTDIR_OVERLAY='/Users/mariusz/GENTOO/usr/local/portage/mechanic-overlay'
 
 ## Installing Mechanic
 
-USE="fortran" emerge --autounmask-write mechanic
-USE="fortran" emerge mechanic
+USE="fortran hdf5" emerge --autounmask-write mechanic
+USE="fortran hdf5" emerge mechanic
 
 Note: for MAC OS X users:
-USE="-numa static-libs fortran" emerge mechanic
+USE="-numa static-libs fortran hdf5" emerge mechanic
 
 ## Installing Mechanic modules
 
