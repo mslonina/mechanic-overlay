@@ -8,6 +8,7 @@ inherit cmake-utils
 DESCRIPTION="The CS module for Mechanic"
 HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
 SRC_URI="https://github.com/downloads/mslonina/MechanicModules/${P}.tar.gz"
+RESTRICT="fetch"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,6 +19,12 @@ DEPEND="
   virtual/mpi[fortran]
 "
 RDEPEND=${DEPEND}
+
+pkg_nofetch() {
+  einfo "To get a copy of the CS-module please send an email to:"
+  einfo "  k.gozdziewski@astri.umk.pl"
+  einfo "and place the tarball in ${DISTDIR}"
+}
 
 pkg_setup() {
   export CC=mpicc
