@@ -7,7 +7,6 @@ inherit cmake-utils
 
 DESCRIPTION="The CS module for Mechanic"
 HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
-#SRC_URI="https://github.com/downloads/mslonina/MechanicModules/${P}.tar.gz"
 RESTRICT="fetch"
 
 LICENSE="BSD"
