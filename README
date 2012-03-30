@@ -13,7 +13,6 @@ PORTDIR_OVERLAY='/Users/mariusz/GENTOO/usr/local/portage/mechanic-overlay'
 
 ## Installing Mechanic
 
-USE="fortran hdf5" emerge --autounmask-write mechanic
 USE="fortran hdf5" emerge mechanic
 
 Note: for MAC OS X users:
@@ -21,5 +20,12 @@ USE="-numa -pci static-libs fortran hdf5" emerge mechanic
 
 ## Installing Mechanic modules
 
-emerge --autounmask-write mechanic_module_arnoldweb
 emerge mechanic_module_arnoldweb
+emerge mechanic_module_cs
+
+## Installing development branch
+
+Note: stable modules are incompatible with the development branch
+
+emerge --autounmask-write mechanic-9999
+emerge mechanic-9999
