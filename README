@@ -21,7 +21,10 @@ USE="-numa -pci static-libs fortran hdf5" emerge mechanic
 ## Installing Mechanic modules
 
 emerge mechanic_module_arnoldweb
-emerge mechanic_module_cs
+
+## Installing fetch-restricted Mechanic modules
+
+To install fetch-restricted modules, please send an email to mechanics@astri.umk.pl. The tarball should be placed in $PREFIX/usr/portage/distfiles.
 
 ## Installing development branch
 
