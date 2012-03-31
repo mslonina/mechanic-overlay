@@ -14,7 +14,7 @@ EGIT_BRANCH="0.13"
 SRC_URI=""
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="2"
 KEYWORDS=""
 
 DEPEND="dev-libs/libreadconfig[hdf5]
