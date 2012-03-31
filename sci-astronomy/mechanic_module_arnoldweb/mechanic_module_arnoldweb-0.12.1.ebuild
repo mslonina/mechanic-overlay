@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE="config"
 
 DEPEND="
-  sci-misc/mechanic
+  sci-misc/mechanic:0
   virtual/mpi
   config? ( dev-libs/libreadconfig[hdf5] )
 "

@@ -17,7 +17,8 @@ IUSE="fortran"
 
 DEPEND="dev-libs/libreadconfig[hdf5]
 	fortran? ( virtual/fortran )
-	virtual/mpi[fortran?]"
+	virtual/mpi[fortran?]
+  sci-libs/hdf5"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {

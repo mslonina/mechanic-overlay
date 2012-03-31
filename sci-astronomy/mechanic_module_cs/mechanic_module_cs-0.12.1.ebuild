@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 
 DEPEND="
-  sci-misc/mechanic[fortran]
+  sci-misc/mechanic:0[fortran]
   virtual/mpi[fortran]
 "
 RDEPEND=${DEPEND}

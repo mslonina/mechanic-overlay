@@ -14,11 +14,12 @@ EGIT_BRANCH="0.13"
 SRC_URI=""
 
 LICENSE="BSD"
-SLOT="2"
-KEYWORDS="~amd64 ~x86"
+SLOT="0"
+KEYWORDS=""
 
 DEPEND="dev-libs/libreadconfig[hdf5]
-	virtual/mpi"
+	virtual/mpi
+  sci-libs/hdf5"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
