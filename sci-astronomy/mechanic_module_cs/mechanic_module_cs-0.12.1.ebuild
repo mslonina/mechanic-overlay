@@ -7,6 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="The CS module for Mechanic"
 HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
+SRC_URI="${P}.tar.gz"
 RESTRICT="fetch"
 
 LICENSE="BSD"
@@ -22,7 +23,7 @@ RDEPEND=${DEPEND}
 pkg_nofetch() {
   einfo "To get a copy of the CS-module please send an email to:"
   einfo "  mechanics@astri.umk.pl"
-  einfo "and place the tarball in ${DISTDIR}"
+  einfo "and place the ${P}.tar.gz in ${DISTDIR}"
 }
 
 pkg_setup() {
