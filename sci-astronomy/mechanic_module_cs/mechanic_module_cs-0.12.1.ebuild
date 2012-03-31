@@ -12,7 +12,7 @@ RESTRICT="fetch"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~x64-macos ~amd64 ~x86"
 
 DEPEND="
   sci-misc/mechanic:0[fortran]

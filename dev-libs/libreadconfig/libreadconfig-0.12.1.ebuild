@@ -12,7 +12,7 @@ SRC_URI="http://github.com/downloads/mslonina/LibReadConfig/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~x64-macos ~amd64 ~x86"
 IUSE="hdf5"
 
 DEPEND="hdf5? ( sci-libs/hdf5 )"
