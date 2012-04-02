@@ -17,7 +17,7 @@ LICENSE="BSD"
 SLOT="2"
 KEYWORDS=""
 
-DEPEND="dev-libs/libreadconfig[hdf5]
+DEPEND=">=dev-libs/libreadconfig-0.12.2[hdf5]
 	virtual/mpi
   sci-libs/hdf5"
 RDEPEND="${DEPEND}"
