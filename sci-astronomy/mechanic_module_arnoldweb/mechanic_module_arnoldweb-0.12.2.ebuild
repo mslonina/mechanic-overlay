@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="The Arnoldweb module for Mechanic"
 HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
-SRC_URI="https://github.com/downloads/mslonina/MechanicModules/${P}.tar.gz"
+SRC_URI="https://github.com/mslonina/MechanicModules/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -21,8 +21,15 @@ DEPEND="
 "
 RDEPEND=${DEPEND}
 
+S="${WORKDIR}/${P}/${PN}"
+
 pkg_setup() {
   export CC=mpicc
+}
+
+src_unpack() {
+  unpack ${A}
+  mv mslonina-MechanicModules-* ${P} || die
 }
 
 src_configure() {

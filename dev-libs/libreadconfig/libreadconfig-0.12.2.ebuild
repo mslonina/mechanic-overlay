@@ -19,7 +19,10 @@ IUSE="hdf5"
 DEPEND="hdf5? ( sci-libs/hdf5 )"
 RDEPEND="${DEPEND}"
   
-S="${WORKDIR}"/${GITHUB_USER}-LibReadConfig-d83ce8e
+src_unpack() {
+  unpack ${A}
+  mv mslonina-LibReadConfig-* ${P} || die
+}
 
 src_configure() {
 	local mycmakeargs=(

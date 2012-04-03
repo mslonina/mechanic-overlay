@@ -21,11 +21,14 @@ DEPEND="dev-libs/libreadconfig[hdf5]
   sci-libs/hdf5"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/mslonina-Mechanic-e82b48a
-
 pkg_setup() {
 	export CC=mpicc
 	use fortran && export FC=mpif90
+}
+
+src_unpack() {
+  unpack ${A}
+  mv mslonina-Mechanic-* ${P} || die
 }
 
 src_configure() {
