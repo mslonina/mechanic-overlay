@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit cmake-utils
+inherit cmake-utils vcs-snapshot
 
 DESCRIPTION="MPI task management system"
 HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
@@ -23,11 +23,3 @@ pkg_setup() {
 	export CC=mpicc
 }
 
-src_unpack() {
-  unpack ${A}
-  mv mslonina-Mechanic-* ${P} || die
-}
-
-src_configure() {
-	cmake-utils_src_configure
-}
