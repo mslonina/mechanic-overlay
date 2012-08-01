@@ -28,7 +28,7 @@ To install fetch-restricted modules, please send an email to mechanics@astri.umk
 
 ## Installing Mechanic-2.0
 
-USE="hdf5" emerge >=sci-misc/mechanic-2.0.0_rc7
+USE="hdf5" emerge >=sci-misc/mechanic-2.0.0
 
 Note: Mechanic-0.12 and Mechanic-2.0 modules are incompatible. Direct Fortran support has
 been dropped in Mechanic-2.0 branch.
