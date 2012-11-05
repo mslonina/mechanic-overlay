@@ -7,7 +7,7 @@ Gentoo Overlay for the Mechanic
     git clone git://github.com/mslonina/mechanic-overlay.git
 
 
-## Add PORTDIR_OVERLAY to $EPREFIX/make.conf (full path must be used), i.e:
+Add PORTDIR_OVERLAY to $EPREFIX/etc/portage/make.conf (full path must be used), i.e:
 
     PORTDIR_OVERLAY='/Users/mariusz/GENTOO/usr/local/portage/mechanic-overlay'
 
