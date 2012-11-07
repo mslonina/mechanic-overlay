@@ -4,20 +4,17 @@
 
 EAPI=4
 
-inherit git-2 cmake-utils
+inherit cmake-utils vcs-snapshot
 
 DESCRIPTION="MPI task management system"
 HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
-EGIT_REPO_URI="git://github.com/mslonina/Mechanic.git"
-EGIT_PROJECT="mechanic-9999"
-EGIT_BRANCH="0.13"
-SRC_URI=""
+SRC_URI="http://github.com/mslonina/Mechanic/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="2"
-KEYWORDS=""
+KEYWORDS="~x64-macos ~amd64 ~x86"
 
-DEPEND=">=dev-libs/libreadconfig-0.12.3[hdf5]
+DEPEND=">=dev-libs/libreadconfig-0.12.7[hdf5]
 	virtual/mpi
   sci-libs/hdf5"
 RDEPEND="${DEPEND}"
@@ -26,11 +23,3 @@ pkg_setup() {
 	export CC=mpicc
 }
 
-src_unpack() {
-  default
-  git-2_src_unpack
-}
-
-src_configure() {
-	cmake-utils_src_configure
-}
