@@ -7,7 +7,7 @@ EAPI=4
 inherit cmake-utils vcs-snapshot
 
 DESCRIPTION="MPI task management system"
-HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
+HOMEPAGE="http://git.ca.umk.pl/"
 SRC_URI="http://github.com/mslonina/Mechanic/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
