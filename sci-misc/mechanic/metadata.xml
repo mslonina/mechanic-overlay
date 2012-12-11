@@ -5,7 +5,4 @@
 		<email>mariusz.slonina@gmail.com</email>
 		<name>Mariusz Słonina</name>
 	</maintainer>
-  <use>
-    <flag name='fortran'>Enable Fortran support</flag>
-  </use>
 </pkgmetadata>
