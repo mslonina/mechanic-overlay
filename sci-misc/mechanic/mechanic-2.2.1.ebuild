@@ -11,7 +11,7 @@ HOMEPAGE="http://git.astri.umk.pl/projects/mechanic"
 SRC_URI="http://github.com/mslonina/Mechanic/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="2"
+SLOT="0"
 KEYWORDS="~x64-macos ~amd64 ~x86"
 
 DEPEND="
