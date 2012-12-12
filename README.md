@@ -14,5 +14,5 @@ Add PORTDIR_OVERLAY to $EPREFIX/etc/portage/make.conf (full path must be used), 
 
 ## Installing Mechanic
 
-    USE="hdf5" emerge sci-misc/mechanic
+    emerge sci-misc/mechanic
 
