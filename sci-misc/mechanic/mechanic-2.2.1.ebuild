@@ -12,7 +12,7 @@ SRC_URI="http://github.com/mslonina/Mechanic/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x64-macos ~amd64 ~x86"
+KEYWORDS="~x64-macos ~amd64-linux ~x86-linux"
 
 DEPEND="
 	virtual/mpi
